@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Clipboardmaster</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">클립보드의 파일을 전송할까요?</string>
+    <string name="send_btn">전송</string>
+    <string name="copyClip_btn">복사합니다</string>
+    <string name="cancle_btn">취소</string>
+    <string name="editTextView_btn_hint">텍스트뷰에 입력할 내용을 적으세요</string>
+    <string name="sendTextView_btn">전송</string>
+    <string name="receiveTextView">길게 눌러서 복사</string>
+    <string name="quit_imgBtn">뒤로가기 버튼</string>
+</resources>
