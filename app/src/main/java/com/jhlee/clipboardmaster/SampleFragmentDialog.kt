@@ -10,13 +10,13 @@ import com.jhlee.clipboardmaster.databinding.FragmentClipboardBinding
 
 class SampleFragmentDialog : DialogFragment() {
 
+    private lateinit var binding: FragmentClipboardBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //false로 설정해 주면 화면밖 혹은 뒤로가기 버튼시 다이얼로그라 dismiss 되지 않는다.
         isCancelable = true
     }
-
-    private lateinit var binding: FragmentClipboardBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,

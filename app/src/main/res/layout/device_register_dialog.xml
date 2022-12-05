@@ -4,42 +4,53 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     tools:context=".ClipboardFragment">
+
     <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="350dp"
+        android:layout_height="220dp"
         android:background="#2B353E"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="24dp">
 
-        <!-- TODO: Update blank fragment layout -->
         <TextView
             android:id="@+id/guide_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hello_blank_fragment"
+            android:layout_marginTop="5dp"
+            android:text="메인 기기 번호를 입력하세요"
             android:textColor="@android:color/white"
-            android:textSize="15dp" />
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/deviceIdTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/white" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal">
+
             <Button
-                android:id="@+id/send_btn"
+                android:id="@+id/sink_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:layout_marginHorizontal="20dp"
-                android:text="@string/send_btn" />
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginTop="30dp"
+                android:text="연결" />
 
             <Button
                 android:id="@+id/cancle_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginHorizontal="0dp"
+                android:layout_marginTop="30dp"
                 android:text="@string/cancle_btn" />
         </LinearLayout>
     </LinearLayout>

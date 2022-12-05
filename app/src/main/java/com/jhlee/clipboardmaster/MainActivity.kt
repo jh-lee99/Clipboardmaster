@@ -5,9 +5,7 @@ import android.app.NotificationManager
 import android.content.*
 import android.content.ClipDescription.MIMETYPE_TEXT_PLAIN
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.LiveFolders.INTENT
 import android.provider.Settings
 import android.util.Log
 import android.view.KeyEvent
@@ -17,8 +15,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationManagerCompat
 import com.jhlee.clipboardmaster.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -55,6 +55,9 @@ class MainActivity : AppCompatActivity() {
         // 구현해야 할 기능 버튼 두가지
         mainBtn = binding.mainBtn
         subBtn = binding.subBtn
+        //val tm = getSystemService(TELEPHONY_SERVICE) as TelephonyManager
+        deviceId = Settings.Secure.getString(this.contentResolver, Settings.Secure.ANDROID_ID);
+        deviceName = Build.MODEL
 
         // fragment dialog 를 띄우기 위해 임시로 만든 버튼, mainActivity 만든 이후 없에야 함
         copyClipBtn = binding.copyClipBtn
@@ -74,6 +77,12 @@ class MainActivity : AppCompatActivity() {
         dialog = SampleFragmentDialog()
 
         setContentView(binding.root)
+
+        // 메인기기 버튼과 서브기기 버튼
+        subBtn.setOnClickListener{
+
+        }
+
 
         // 복사합니다 버튼
         copyClipBtn.setOnClickListener {
