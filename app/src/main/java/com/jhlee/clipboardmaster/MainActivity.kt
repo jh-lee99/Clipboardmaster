@@ -80,7 +80,15 @@ class MainActivity : AppCompatActivity() {
 
         // 메인기기 버튼과 서브기기 버튼
         subBtn.setOnClickListener{
-
+            var registerFragmentDialog = RegisterFragmentDialog(this)
+            if (!registerFragmentDialog.isAdded) {
+                registerFragmentDialog.show(
+                    supportFragmentManager, "SampleDialog"
+                )
+                Log.i("subRegister", "띄움")
+            } else {
+                Log.e("subRegister", "못띄움")
+            }
         }
 
 
